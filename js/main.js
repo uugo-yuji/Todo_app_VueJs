@@ -6,6 +6,9 @@ var app = new Vue({
   },
   methods: {
     addItem: function(event) {
+      // newItemが空だったら（フォームに何も入力しなかったら）処理を終わらせる
+      if(this.newItem == '') return;
+      
       var todo = {
         item: this.newItem
       };
