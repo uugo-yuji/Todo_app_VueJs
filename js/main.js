@@ -8,9 +8,11 @@ var app = new Vue({
     addItem: function(event) {
       // newItemが空だったら（フォームに何も入力しなかったら）処理を終わらせる
       if(this.newItem == '') return;
-      
+
       var todo = {
-        item: this.newItem
+        item: this.newItem,
+        // isDoneでタスクの完了、未完了を管理する・初期値はfalse
+        isDone: false
       };
 
       this.todos.push(todo);
