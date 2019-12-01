@@ -11,6 +11,8 @@ var app = new Vue({
       };
 
       this.todos.push(todo);
+      // form入力後に値をクリアにする処理
+      this.newItem = '';
     }
   }
 })
